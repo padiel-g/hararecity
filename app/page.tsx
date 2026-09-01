@@ -27,32 +27,34 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
       {/* Hero Section */}
-      <div className="bg-primary text-primary-foreground">
+      <div className="bg-[#0B5D2A] text-white">
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-4xl mx-auto text-center space-y-4">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <Building2 className="h-12 w-12" />
-              <h1 className="text-4xl md:text-5xl font-bold">Smart City e-Governance Platform</h1>
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 ring-1 ring-white/20 backdrop-blur-sm">
+                <Building2 className="h-8 w-8" />
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Harare City Council</h1>
             </div>
-            <p className="text-xl text-primary-foreground/90">Gweru City Council</p>
-            <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
-              Transforming urban management through modern technology. Submit service requests, track progress, and help
-              build a more efficient and transparent community.
+            <p className="text-xl font-semibold text-emerald-50">Smart Citizen Services</p>
+            <p className="text-lg text-emerald-50/90 max-w-2xl mx-auto">
+              Submit requests, monitor municipal services, and help improve the delivery of essential civic services for
+              Harare residents.
             </p>
             <div className="flex flex-wrap gap-4 justify-center pt-4">
               {isAuthenticated ? (
                 <>
                   <Link href="/admin">
-                    <Button variant="secondary" size="lg">
+                    <Button variant="secondary" size="lg" className="bg-white text-[#0B5D2A] hover:bg-emerald-50">
                       <Building2 className="h-5 w-5 mr-2" />
-                      Admin Dashboard
+                      Department Dashboard
                     </Button>
                   </Link>
                   <UserMenu />
                 </>
               ) : (
                 <Link href="/login">
-                  <Button variant="secondary" size="lg">
+                  <Button variant="secondary" size="lg" className="bg-white text-[#0B5D2A] hover:bg-emerald-50">
                     <LogIn className="h-5 w-5 mr-2" />
                     Staff Login
                   </Button>
@@ -86,7 +88,7 @@ export default function Home() {
               <div className="mb-6 text-center">
                 <h2 className="text-2xl font-bold mb-2">Community Announcements</h2>
                 <p className="text-muted-foreground">
-                  Stay informed with the latest updates from Gweru City Council departments
+                  Stay informed with the latest updates from Harare City Council departments
                 </p>
               </div>
               <AnnouncementsList />

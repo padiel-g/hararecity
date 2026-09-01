@@ -1,10 +1,8 @@
-# Smart City e-Governance Platform
+# Harare City Council Smart Citizen Services
 
-Smart Village Gweru is a full-stack web platform that lets rural residents submit, track, and prioritize 
-service requests (water, roads, health, education, power) and receive announcements from local authorities. 
-Departments get a secure dashboard to manage tickets, update statuses, and view analytics.
+Harare City Council Smart Citizen Services is a municipal service portal that lets residents submit, track, and prioritize service requests for water, roads, health, education, power, waste, and other civic services. Departments use a secure dashboard to manage tickets, update status, and monitor service delivery.
 
-Tech stack: Next.js / React, Flask API, SQLite/Postgres-ready.
+Tech stack: Next.js / React with local state and demo civic data, designed for a municipal service workflow.
 
 ## Getting Started
 

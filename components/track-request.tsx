@@ -11,10 +11,10 @@ import type { ServiceRequest } from "@/lib/types"
 import { Search, Calendar, MapPin, User, Phone } from "lucide-react"
 
 const statusColors = {
-  pending: "bg-yellow-500",
-  "in-progress": "bg-blue-500",
-  resolved: "bg-green-500",
-  rejected: "bg-red-500",
+  pending: "bg-[#EAF6EE] text-[#0B5D2A] border border-[#CDE7D4]",
+  "in-progress": "bg-[#EAF6EE] text-[#0B5D2A] border border-[#CDE7D4]",
+  resolved: "bg-[#EAF6EE] text-[#0B5D2A] border border-[#CDE7D4]",
+  rejected: "bg-red-100 text-red-700 border border-red-200",
 }
 
 const statusLabels = {

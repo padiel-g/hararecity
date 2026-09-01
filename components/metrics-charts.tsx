@@ -18,7 +18,7 @@ import {
   Legend,
 } from "recharts"
 
-const COLORS = ["#3b82f6", "#10b981", "#f59e0b", "#ef4444", "#8b5cf6", "#ec4899", "#6366f1"]
+const COLORS = ["#16803C", "#0B5D2A", "#7BC48A", "#EAF6EE", "#DDE7E0", "#CDE7D4", "#2D6A3E"]
 
 interface MetricsChartsProps {
   metrics: PerformanceMetrics
@@ -60,7 +60,7 @@ export function MetricsCharts({ metrics }: MetricsChartsProps) {
               <div className="text-sm text-muted-foreground mt-1">Resolution Rate</div>
             </div>
             <div className="text-center p-4 border rounded-lg">
-              <div className="text-3xl font-bold text-blue-600">{metrics.totalRequests}</div>
+              <div className="text-3xl font-bold text-[#16803C]">{metrics.totalRequests}</div>
               <div className="text-sm text-muted-foreground mt-1">Total Requests</div>
             </div>
           </div>
@@ -81,8 +81,8 @@ export function MetricsCharts({ metrics }: MetricsChartsProps) {
               <YAxis />
               <Tooltip />
               <Legend />
-              <Line type="monotone" dataKey="requests" stroke="#3b82f6" name="Submitted" strokeWidth={2} />
-              <Line type="monotone" dataKey="resolved" stroke="#10b981" name="Resolved" strokeWidth={2} />
+              <Line type="monotone" dataKey="requests" stroke="#16803C" name="Submitted" strokeWidth={2} />
+              <Line type="monotone" dataKey="resolved" stroke="#0B5D2A" name="Resolved" strokeWidth={2} />
             </LineChart>
           </ResponsiveContainer>
         </CardContent>
@@ -102,7 +102,7 @@ export function MetricsCharts({ metrics }: MetricsChartsProps) {
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Tooltip />
-                <Bar dataKey="value" fill="#3b82f6" />
+                <Bar dataKey="value" fill="#16803C" />
               </BarChart>
             </ResponsiveContainer>
           </CardContent>

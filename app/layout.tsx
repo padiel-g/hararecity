@@ -7,9 +7,9 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title: 'Harare City Council | Smart Citizen Services',
+  description: 'Harare City Council municipal service portal for residents to submit, track, and resolve civic service requests.',
+  generator: 'Harare City Council Smart Citizen Services',
 }
 
 export default function RootLayout({

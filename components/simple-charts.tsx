@@ -18,9 +18,9 @@ export function SimpleCharts({ metrics }: SimpleChartsProps) {
   const maxCategoryValue = Math.max(...categoryData.map((d) => d.value), 1)
 
   const statusData = [
-    { name: "Pending", value: metrics.pendingRequests, color: "bg-yellow-500" },
-    { name: "In Progress", value: metrics.inProgressRequests, color: "bg-blue-500" },
-    { name: "Resolved", value: metrics.resolvedRequests, color: "bg-green-500" },
+    { name: "Pending", value: metrics.pendingRequests, color: "bg-[#EAF6EE]" },
+    { name: "In Progress", value: metrics.inProgressRequests, color: "bg-[#16803C]" },
+    { name: "Resolved", value: metrics.resolvedRequests, color: "bg-[#0B5D2A]" },
     { name: "Rejected", value: metrics.rejectedRequests, color: "bg-red-500" },
   ].filter((item) => item.value > 0)
 
@@ -47,7 +47,7 @@ export function SimpleCharts({ metrics }: SimpleChartsProps) {
               <div className="text-sm text-muted-foreground mt-1">Resolution Rate</div>
             </div>
             <div className="text-center p-4 border rounded-lg">
-              <div className="text-3xl font-bold text-blue-600">{metrics.totalRequests}</div>
+              <div className="text-3xl font-bold text-[#16803C]">{metrics.totalRequests}</div>
               <div className="text-sm text-muted-foreground mt-1">Total Requests</div>
             </div>
           </div>
@@ -76,7 +76,7 @@ export function SimpleCharts({ metrics }: SimpleChartsProps) {
                     <div className="flex-1">
                       <div className="h-8 bg-muted rounded overflow-hidden">
                         <div
-                          className="h-full bg-blue-500 transition-all"
+                          className="h-full bg-[#16803C] transition-all"
                           style={{ width: `${(trend.requests / maxValue) * 100}%` }}
                         />
                       </div>
@@ -96,7 +96,7 @@ export function SimpleCharts({ metrics }: SimpleChartsProps) {
           </div>
           <div className="flex gap-4 mt-4 text-sm">
             <div className="flex items-center gap-2">
-              <div className="w-4 h-4 bg-blue-500 rounded" />
+              <div className="w-4 h-4 bg-[#16803C] rounded" />
               <span>Submitted</span>
             </div>
             <div className="flex items-center gap-2">

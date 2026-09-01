@@ -28,13 +28,13 @@ export default function LoginPage() {
       <div className="w-full max-w-md space-y-8">
         <div className="text-center">
           <Link href="/" className="inline-flex items-center gap-2 mb-4">
-            <div className="h-8 w-8 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold">
-              SV
+            <div className="h-10 w-10 bg-[#16803C] rounded-xl flex items-center justify-center text-white font-bold shadow-sm">
+              HCC
             </div>
-            <span className="text-2xl font-bold">Smart Village</span>
+            <span className="text-2xl font-bold text-[#0B5D2A]">Harare City Council</span>
           </Link>
-          <h1 className="text-3xl font-bold">Welcome Back</h1>
-          <p className="text-muted-foreground mt-2">Sign in to access the admin dashboard</p>
+          <h1 className="text-3xl font-bold text-[#1F2937]">Welcome Back</h1>
+          <p className="text-muted-foreground mt-2">Sign in to access the Smart Citizen Services portal</p>
         </div>
 
         <LoginForm />

@@ -23,12 +23,15 @@ export function calculateMetrics(requests: ServiceRequest[]): PerformanceMetrics
   // Requests by category
   const requestsByCategory: Record<RequestCategory, number> = {
     water: 0,
-    healthcare: 0,
+    roads: 0,
+    health: 0,
     education: 0,
-    infrastructure: 0,
-    sanitation: 0,
     electricity: 0,
-    other: 0,
+    waste: 0,
+    environment: 0,
+    infrastructure: 0,
+    "public-safety": 0,
+    general: 0,
   }
   requests.forEach((r) => {
     requestsByCategory[r.category]++
@@ -107,12 +110,15 @@ function calculateDepartmentPerformance(requests: ServiceRequest[]) {
   // Map categories to departments
   const categoryToDepartment: Record<RequestCategory, string> = {
     water: "Engineering",
-    healthcare: "Health",
+    roads: "Engineering",
+    health: "Health",
     education: "Education",
-    infrastructure: "Engineering",
-    sanitation: "Engineering",
     electricity: "ZESA",
-    other: "General",
+    waste: "Engineering",
+    environment: "Environmental Services",
+    infrastructure: "Engineering",
+    "public-safety": "Public Safety",
+    general: "General Services",
   }
 
   requests.forEach((request) => {

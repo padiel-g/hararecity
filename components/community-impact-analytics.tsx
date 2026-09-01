@@ -61,7 +61,7 @@ export function CommunityImpactAnalytics({ metrics }: CommunityImpactAnalyticsPr
               <div className="text-xs text-muted-foreground mt-1">Resolution Rate</div>
             </div>
             <div className="text-center p-3 bg-background rounded-lg border">
-              <div className="text-2xl font-bold text-blue-600">{metrics.averageResolutionTime.toFixed(1)}</div>
+              <div className="text-2xl font-bold text-[#16803C]">{metrics.averageResolutionTime.toFixed(1)}</div>
               <div className="text-xs text-muted-foreground mt-1">Avg Days to Resolve</div>
             </div>
             <div className="text-center p-3 bg-background rounded-lg border">
@@ -102,8 +102,8 @@ export function CommunityImpactAnalytics({ metrics }: CommunityImpactAnalyticsPr
               <YAxis />
               <Tooltip />
               <Legend />
-              <Bar dataKey="resolved" fill="#10b981" name="Resolved" />
-              <Bar dataKey="pending" fill="#f59e0b" name="Pending" />
+              <Bar dataKey="resolved" fill="#16803C" name="Resolved" />
+              <Bar dataKey="pending" fill="#7BC48A" name="Pending" />
             </BarChart>
           </ResponsiveContainer>
         </CardContent>
@@ -122,8 +122,8 @@ export function CommunityImpactAnalytics({ metrics }: CommunityImpactAnalyticsPr
                 <PolarGrid />
                 <PolarAngleAxis dataKey="department" />
                 <PolarRadiusAxis angle={90} domain={[0, 100]} />
-                <Radar name="Efficiency" dataKey="efficiency" stroke="#3b82f6" fill="#3b82f6" fillOpacity={0.6} />
-                <Radar name="Speed" dataKey="speed" stroke="#10b981" fill="#10b981" fillOpacity={0.6} />
+                <Radar name="Efficiency" dataKey="efficiency" stroke="#16803C" fill="#16803C" fillOpacity={0.6} />
+                <Radar name="Speed" dataKey="speed" stroke="#0B5D2A" fill="#0B5D2A" fillOpacity={0.6} />
                 <Legend />
               </RadarChart>
             </ResponsiveContainer>

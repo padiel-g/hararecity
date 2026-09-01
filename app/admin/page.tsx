@@ -49,11 +49,11 @@ function AdminDashboardContent() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-2xl font-bold">Admin Dashboard</h1>
+              <h1 className="text-2xl font-bold text-[#0B5D2A]">Harare Municipal Dashboard</h1>
               <p className="text-sm text-muted-foreground">
                 {currentUser?.department
                   ? `${currentUser.name} - ${currentUser.department}`
-                  : "Smart City e-Governance Plartform"}
+                  : "Harare City Council Smart Citizen Services"}
               </p>
             </div>
             <div className="flex items-center gap-2">

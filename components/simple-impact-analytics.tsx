@@ -41,7 +41,7 @@ export function SimpleImpactAnalytics({ metrics }: SimpleImpactAnalyticsProps) {
               <div className="text-xs text-muted-foreground mt-1">Resolution Rate</div>
             </div>
             <div className="text-center p-3 bg-background rounded-lg border">
-              <div className="text-2xl font-bold text-blue-600">{metrics.averageResolutionTime.toFixed(1)}</div>
+              <div className="text-2xl font-bold text-[#16803C]">{metrics.averageResolutionTime.toFixed(1)}</div>
               <div className="text-xs text-muted-foreground mt-1">Avg Days to Resolve</div>
             </div>
             <div className="text-center p-3 bg-background rounded-lg border">
@@ -140,7 +140,7 @@ export function SimpleImpactAnalytics({ metrics }: SimpleImpactAnalyticsProps) {
                       <div>
                         <div className="text-muted-foreground mb-1">Efficiency</div>
                         <div className="h-2 bg-muted rounded overflow-hidden">
-                          <div className="h-full bg-blue-500" style={{ width: `${efficiency}%` }} />
+                          <div className="h-full bg-[#16803C]" style={{ width: `${efficiency}%` }} />
                         </div>
                       </div>
                       <div>

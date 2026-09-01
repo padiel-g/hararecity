@@ -13,10 +13,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 
 const statusColors = {
-  pending: "bg-yellow-500",
-  "in-progress": "bg-blue-500",
-  resolved: "bg-green-500",
-  rejected: "bg-red-500",
+  pending: "bg-[#EAF6EE] text-[#0B5D2A] border border-[#CDE7D4]",
+  "in-progress": "bg-[#EAF6EE] text-[#0B5D2A] border border-[#CDE7D4]",
+  resolved: "bg-[#EAF6EE] text-[#0B5D2A] border border-[#CDE7D4]",
+  rejected: "bg-red-100 text-red-700 border border-red-200",
 }
 
 const statusLabels = {
@@ -27,9 +27,9 @@ const statusLabels = {
 }
 
 const priorityColors = {
-  low: "bg-gray-500",
-  medium: "bg-orange-500",
-  high: "bg-red-500",
+  low: "bg-[#EAF6EE] text-[#0B5D2A] border border-[#CDE7D4]",
+  medium: "bg-amber-100 text-amber-800 border border-amber-200",
+  high: "bg-red-100 text-red-700 border border-red-200",
 }
 
 interface RequestsTableProps {

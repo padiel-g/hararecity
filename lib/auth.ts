@@ -14,42 +14,42 @@ export interface RegisterData extends LoginCredentials {
 // Demo credentials for testing
 const DEMO_ADMINS = [
   {
-    email: "education@gweru.gov.zw",
+    email: "education@harare.gov.zw",
     password: "edu123",
     role: "admin" as const,
     department: "education" as Department,
     name: "Education Department Admin",
   },
   {
-    email: "health@gweru.gov.zw",
+    email: "health@harare.gov.zw",
     password: "health123",
     role: "admin" as const,
     department: "health" as Department,
     name: "Health Department Admin",
   },
   {
-    email: "engineering@gweru.gov.zw",
+    email: "engineering@harare.gov.zw",
     password: "eng123",
     role: "admin" as const,
     department: "engineering-infrastructure" as Department,
     name: "Engineering & Infrastructure Admin",
   },
   {
-    email: "social@gweru.gov.zw",
+    email: "social@harare.gov.zw",
     password: "social123",
     role: "admin" as const,
     department: "social-services-housing" as Department,
     name: "Social Services & Housing Admin",
   },
   {
-    email: "zesa@gweru.gov.zw",
+    email: "zesa@harare.gov.zw",
     password: "zesa123",
     role: "admin" as const,
     department: "zesa" as Department,
     name: "ZESA Admin",
   },
   {
-    email: "admin@gweru.gov.zw",
+    email: "admin@harare.gov.zw",
     password: "admin123",
     role: "admin" as const,
     department: "general" as Department,
@@ -58,7 +58,7 @@ const DEMO_ADMINS = [
 ]
 
 const DEMO_STAFF = {
-  email: "staff@gweru.gov.zw",
+  email: "staff@harare.gov.zw",
   password: "staff123",
   role: "staff" as const,
 }

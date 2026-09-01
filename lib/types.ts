@@ -2,12 +2,15 @@ export type RequestStatus = "pending" | "in-progress" | "resolved" | "rejected"
 
 export type RequestCategory =
   | "water"
-  | "healthcare"
+  | "roads"
+  | "health"
   | "education"
-  | "infrastructure"
-  | "sanitation"
   | "electricity"
-  | "other"
+  | "waste"
+  | "environment"
+  | "infrastructure"
+  | "public-safety"
+  | "general"
 
 export type Department =
   | "education"

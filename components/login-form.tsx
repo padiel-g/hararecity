@@ -84,7 +84,7 @@ export function LoginForm() {
               required
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              placeholder="education@gweru.gov.zw"
+              placeholder="education@harare.gov.zw"
               autoComplete="email"
             />
           </div>
@@ -107,27 +107,27 @@ export function LoginForm() {
           </Button>
         </form>
 
-        <div className="mt-6 p-4 bg-muted rounded-lg">
-          <p className="text-sm font-medium mb-3">Department Login Credentials:</p>
-          <div className="text-xs space-y-2 text-muted-foreground">
+        <div className="mt-6 p-4 bg-[#EAF6EE] border border-[#DDE7E0] rounded-xl">
+          <p className="text-sm font-medium mb-3 text-[#0B5D2A]">Department Login Credentials:</p>
+          <div className="text-xs space-y-2 text-[#1F2937]">
             <div className="grid grid-cols-2 gap-x-2 gap-y-1">
               <p className="font-medium">Education:</p>
-              <p>education@gweru.gov.zw / edu123</p>
+              <p>education@harare.gov.zw / edu123</p>
 
               <p className="font-medium">Health:</p>
-              <p>health@gweru.gov.zw / health123</p>
+              <p>health@harare.gov.zw / health123</p>
 
               <p className="font-medium">Engineering:</p>
-              <p>engineering@gweru.gov.zw / eng123</p>
+              <p>engineering@harare.gov.zw / eng123</p>
 
               <p className="font-medium">Social Services:</p>
-              <p>social@gweru.gov.zw / social123</p>
+              <p>social@harare.gov.zw / social123</p>
 
               <p className="font-medium">ZESA:</p>
-              <p>zesa@gweru.gov.zw / zesa123</p>
+              <p>zesa@harare.gov.zw / zesa123</p>
 
               <p className="font-medium">General Admin:</p>
-              <p>admin@gweru.gov.zw / admin123</p>
+              <p>admin@harare.gov.zw / admin123</p>
             </div>
           </div>
         </div>

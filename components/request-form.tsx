@@ -15,13 +15,16 @@ import { AlertCircle, CheckCircle2 } from "lucide-react"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 
 const categories: { value: RequestCategory; label: string }[] = [
-  { value: "water", label: "Water Supply" },
-  { value: "healthcare", label: "Healthcare" },
+  { value: "water", label: "Water & Sewerage" },
+  { value: "roads", label: "Roads & Traffic" },
+  { value: "health", label: "Health Services" },
   { value: "education", label: "Education" },
+  { value: "electricity", label: "Electricity & Public Lighting" },
+  { value: "waste", label: "Waste Management" },
+  { value: "environment", label: "Environment & Parks" },
   { value: "infrastructure", label: "Infrastructure" },
-  { value: "sanitation", label: "Sanitation" },
-  { value: "electricity", label: "Electricity" },
-  { value: "other", label: "Other" },
+  { value: "public-safety", label: "Public Safety" },
+  { value: "general", label: "General Municipal Services" },
 ]
 
 export function RequestForm() {
@@ -77,8 +80,8 @@ export function RequestForm() {
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>
-        <CardTitle>Submit Service Request</CardTitle>
-        <CardDescription>Report issues or request services from your local authorities</CardDescription>
+        <CardTitle className="text-[#0B5D2A]">Submit Service Request</CardTitle>
+        <CardDescription>Report municipal issues or request services from Harare City Council</CardDescription>
       </CardHeader>
       <CardContent>
         {submitStatus === "success" && (
@@ -182,7 +185,7 @@ export function RequestForm() {
               required
               value={formData.location}
               onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-              placeholder="e.g., Mkoba 5, Gweru"
+              placeholder="e.g., Belvedere, Harare"
             />
           </div>
 
