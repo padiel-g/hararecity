@@ -20,7 +20,7 @@ export function SimpleCharts({ metrics }: SimpleChartsProps) {
   const statusData = [
     { name: "Pending", value: metrics.pendingRequests, color: "bg-[#EAF6EE]" },
     { name: "In Progress", value: metrics.inProgressRequests, color: "bg-[#16803C]" },
-    { name: "Resolved", value: metrics.resolvedRequests, color: "bg-[#0B5D2A]" },
+    { name: "Resolved", value: metrics.resolvedRequests, color: "bg-[#1e40af]" },
     { name: "Rejected", value: metrics.rejectedRequests, color: "bg-red-500" },
   ].filter((item) => item.value > 0)
 

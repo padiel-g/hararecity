@@ -108,7 +108,7 @@ export function LoginForm() {
         </form>
 
         <div className="mt-6 p-4 bg-[#EAF6EE] border border-[#DDE7E0] rounded-xl">
-          <p className="text-sm font-medium mb-3 text-[#0B5D2A]">Department Login Credentials:</p>
+          <p className="text-sm font-medium mb-3 text-[#1e40af]">Department Login Credentials:</p>
           <div className="text-xs space-y-2 text-[#1F2937]">
             <div className="grid grid-cols-2 gap-x-2 gap-y-1">
               <p className="font-medium">Education:</p>

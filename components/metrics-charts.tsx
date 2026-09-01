@@ -18,7 +18,7 @@ import {
   Legend,
 } from "recharts"
 
-const COLORS = ["#16803C", "#0B5D2A", "#7BC48A", "#EAF6EE", "#DDE7E0", "#CDE7D4", "#2D6A3E"]
+const COLORS = ["#1e40af", "#3b82f6", "#60a5fa", "#dbeafe", "#bfdbfe", "#93c5fd", "#2563eb"]
 
 interface MetricsChartsProps {
   metrics: PerformanceMetrics
@@ -82,7 +82,7 @@ export function MetricsCharts({ metrics }: MetricsChartsProps) {
               <Tooltip />
               <Legend />
               <Line type="monotone" dataKey="requests" stroke="#16803C" name="Submitted" strokeWidth={2} />
-              <Line type="monotone" dataKey="resolved" stroke="#0B5D2A" name="Resolved" strokeWidth={2} />
+              <Line type="monotone" dataKey="resolved" stroke="#1e40af" name="Resolved" strokeWidth={2} />
             </LineChart>
           </ResponsiveContainer>
         </CardContent>

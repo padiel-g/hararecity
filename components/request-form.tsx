@@ -80,7 +80,7 @@ export function RequestForm() {
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>
-        <CardTitle className="text-[#0B5D2A]">Submit Service Request</CardTitle>
+        <CardTitle className="text-[#1e40af]">Submit Service Request</CardTitle>
         <CardDescription>Report municipal issues or request services from Harare City Council</CardDescription>
       </CardHeader>
       <CardContent>

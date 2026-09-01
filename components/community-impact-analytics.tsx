@@ -123,7 +123,7 @@ export function CommunityImpactAnalytics({ metrics }: CommunityImpactAnalyticsPr
                 <PolarAngleAxis dataKey="department" />
                 <PolarRadiusAxis angle={90} domain={[0, 100]} />
                 <Radar name="Efficiency" dataKey="efficiency" stroke="#16803C" fill="#16803C" fillOpacity={0.6} />
-                <Radar name="Speed" dataKey="speed" stroke="#0B5D2A" fill="#0B5D2A" fillOpacity={0.6} />
+                <Radar name="Speed" dataKey="speed" stroke="#1e40af" fill="#1e40af" fillOpacity={0.6} />
                 <Legend />
               </RadarChart>
             </ResponsiveContainer>

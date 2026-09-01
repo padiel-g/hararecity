@@ -49,7 +49,7 @@ function AdminDashboardContent() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-2xl font-bold text-[#0B5D2A]">Harare Municipal Dashboard</h1>
+              <h1 className="text-2xl font-bold text-[#1e40af]">Harare Municipal Dashboard</h1>
               <p className="text-sm text-muted-foreground">
                 {currentUser?.department
                   ? `${currentUser.name} - ${currentUser.department}`
