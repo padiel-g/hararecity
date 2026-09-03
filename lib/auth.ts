@@ -65,15 +65,12 @@ const DEMO_STAFF = {
 
 export const auth = {
   login: (credentials: LoginCredentials): User | null => {
-    console.log("[v0] auth.login called with email:", credentials.email)
-
     // Check demo admins
     const demoAdmin = DEMO_ADMINS.find(
       (admin) => admin.email === credentials.email && admin.password === credentials.password,
     )
 
     if (demoAdmin) {
-      console.log("[v0] Found matching demo admin:", demoAdmin.name)
       const user: User = {
         id: `admin-${demoAdmin.department}`,
         name: demoAdmin.name,
@@ -83,15 +80,12 @@ export const auth = {
         phone: "+263771111111",
         createdAt: new Date().toISOString(),
       }
-      console.log("[v0] Setting current user in storage...")
       storage.setCurrentUser(user)
-      console.log("[v0] User saved to storage successfully")
       return user
     }
 
     // Check demo staff
     if (credentials.email === DEMO_STAFF.email && credentials.password === DEMO_STAFF.password) {
-      console.log("[v0] Found matching demo staff")
       const user: User = {
         id: "staff-1",
         name: "Staff User",
@@ -106,18 +100,15 @@ export const auth = {
 
     // Check registered users
     const users = storage.getUsers()
-    console.log("[v0] Checking registered users, count:", users.length)
     const user = users.find((u) => u.email === credentials.email)
 
     if (user) {
-      console.log("[v0] Found registered user:", user.name)
       // In a real app, we'd verify password hash
       // For demo, we'll accept any password for registered users
       storage.setCurrentUser(user)
       return user
     }
 
-    console.log("[v0] No matching user found")
     return null
   },
 
@@ -146,37 +137,27 @@ export const auth = {
   },
 
   logout: () => {
-    console.log("[v0] Logging out user")
     storage.setCurrentUser(null)
   },
 
   getCurrentUser: (): User | null => {
-    const user = storage.getCurrentUser()
-    console.log("[v0] getCurrentUser called, user:", user ? user.name : "null")
-    return user
+    return storage.getCurrentUser()
   },
 
   isAuthenticated: (): boolean => {
-    const authenticated = storage.getCurrentUser() !== null
-    console.log("[v0] isAuthenticated:", authenticated)
-    return authenticated
+    return storage.getCurrentUser() !== null
   },
 
   hasRole: (role: User["role"] | User["role"][]): boolean => {
     const user = storage.getCurrentUser()
     if (!user) {
-      console.log("[v0] hasRole: no user found")
       return false
     }
 
     if (Array.isArray(role)) {
-      const hasRole = role.includes(user.role)
-      console.log("[v0] hasRole check (array):", hasRole, "user role:", user.role, "required:", role)
-      return hasRole
+      return role.includes(user.role)
     }
 
-    const hasRole = user.role === role
-    console.log("[v0] hasRole check (single):", hasRole, "user role:", user.role, "required:", role)
-    return hasRole
+    return user.role === role
   },
 }

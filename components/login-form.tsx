@@ -26,33 +26,20 @@ export function LoginForm() {
     setIsLoading(true)
 
     console.log("[v0] Login attempt started")
-    console.log("[v0] Email:", formData.email)
-    console.log("[v0] Password length:", formData.password.length)
 
     try {
-      console.log("[v0] Calling auth.login...")
       const user = auth.login(formData)
-      console.log("[v0] Login result:", user ? "Success" : "Failed")
 
       if (user) {
-        console.log("[v0] User details:", {
-          id: user.id,
-          name: user.name,
-          role: user.role,
-          department: user.department,
-        })
-
-        const redirectPath = user.role === "admin" || user.role === "staff" ? "/admin" : "/"
-        console.log("[v0] Redirecting to:", redirectPath)
-
         // Small delay to ensure state is saved
         await new Promise((resolve) => setTimeout(resolve, 100))
 
+        const redirectPath = user.role === "admin" || user.role === "staff" ? "/admin" : "/"
         router.push(redirectPath)
         router.refresh()
       } else {
-        console.log("[v0] Login failed: Invalid credentials")
-        setError("Invalid email or password. Please check your credentials and try again.")
+        console.log("[v0] Login failed")
+        setError("Invalid email or password.")
       }
     } catch (err) {
       console.error("[v0] Login error:", err)
@@ -107,29 +94,12 @@ export function LoginForm() {
           </Button>
         </form>
 
-        <div className="mt-6 p-4 bg-[#EAF6EE] border border-[#DDE7E0] rounded-xl">
-          <p className="text-sm font-medium mb-3 text-[#1e40af]">Department Login Credentials:</p>
-          <div className="text-xs space-y-2 text-[#1F2937]">
-            <div className="grid grid-cols-2 gap-x-2 gap-y-1">
-              <p className="font-medium">Education:</p>
-              <p>education@harare.gov.zw / edu123</p>
-
-              <p className="font-medium">Health:</p>
-              <p>health@harare.gov.zw / health123</p>
-
-              <p className="font-medium">Engineering:</p>
-              <p>engineering@harare.gov.zw / eng123</p>
-
-              <p className="font-medium">Social Services:</p>
-              <p>social@harare.gov.zw / social123</p>
-
-              <p className="font-medium">ZESA:</p>
-              <p>zesa@harare.gov.zw / zesa123</p>
-
-              <p className="font-medium">General Admin:</p>
-              <p>admin@harare.gov.zw / admin123</p>
-            </div>
-          </div>
+        <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-xl">
+          <p className="text-sm font-medium mb-2 text-blue-900">Authorized Access Only</p>
+          <p className="text-xs text-blue-800 leading-relaxed">
+            Department accounts are restricted to authorized Harare City Council personnel. 
+            If you require access, please contact the system administrator.
+          </p>
         </div>
       </CardContent>
     </Card>

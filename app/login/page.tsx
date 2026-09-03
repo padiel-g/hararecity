@@ -10,11 +10,9 @@ export default function LoginPage() {
   const router = useRouter()
 
   useEffect(() => {
-    console.log("[v0] Login page mounted, checking auth status")
     // Redirect if already logged in
     if (auth.isAuthenticated()) {
       const user = auth.getCurrentUser()
-      console.log("[v0] User already authenticated:", user)
       if (user?.role === "admin" || user?.role === "staff") {
         router.push("/admin")
       } else {
